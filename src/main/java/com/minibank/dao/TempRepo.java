@@ -5,6 +5,7 @@ import com.minibank.model.Person;
 
 import java.math.BigDecimal;
 import java.util.Collections;
+import java.util.HashMap;
 import java.util.Map;
 
 public class TempRepo {
@@ -26,6 +27,7 @@ public class TempRepo {
         account1.setNumber("1");
         account2.setAmount(new BigDecimal("10000"));
         account2.setNumber("2");
+        map = new HashMap<>();
         map.put("1", account1);
         map.put("2", account2);
     }

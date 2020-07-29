@@ -17,7 +17,7 @@ public class MiniBankService {
         Transaction transaction = objectMapper.readValue(body, Transaction.class);
         Account accountIn = TempRepo.map.get(transaction.getAccountNumberIn());
         Account accountOut = TempRepo.map.get(transaction.getAccountNumberOut());
-        accountIn.getAmount().add(new BigDecimal(transaction.getMoney()));
-        accountIn.getAmount().add(new BigDecimal(transaction.getMoney()).negate());
+        accountIn.setAmount(accountIn.getAmount().add(new BigDecimal(transaction.getMoney())));
+        accountOut.setAmount(accountOut.getAmount().add(new BigDecimal(transaction.getMoney()).negate()));
     }
 }
