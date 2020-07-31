@@ -45,9 +45,9 @@ class MiniBankControllerTest {
 
     private String getBody() {
         return "{\n" +
-                "  \"accountNumberIn\": \"1\",\n" +
-                "  \"accountNumberOut\": \"2\",\n" +
-                "  \"money\": \"100\"\n" +
+                "  \"accountFrom\": \"1\",\n" +
+                "  \"accountTo\": \"2\",\n" +
+                "  \"amount\": \"100\"\n" +
                 "}";
     }
 }

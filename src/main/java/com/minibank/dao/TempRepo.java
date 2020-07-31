@@ -17,8 +17,8 @@ public class TempRepo {
     public static Account account2;
 
     static {
-        person1 = new Person();
-        person2 = new Person();
+        person1 = new Person("vasya", "1234");
+        person2 = new Person("kolya", "5678");
         person1.setAccount(Collections.singletonList(account1));
         person2.setAccount(Collections.singletonList(account2));
         account1 = new Account();
@@ -31,6 +31,4 @@ public class TempRepo {
         map.put("1", account1);
         map.put("2", account2);
     }
-
-
 }

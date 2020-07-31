@@ -7,7 +7,7 @@ import lombok.Setter;
 @Getter
 public class Transaction {
 
-    private String accountNumberIn;
-    private String accountNumberOut;
-    private String money;
+    private String accountFrom;
+    private String accountTo;
+    private String amount;
 }

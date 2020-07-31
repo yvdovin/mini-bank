@@ -1,5 +1,5 @@
 {
-  "accountNumberIn": "1",
-  "accountNumberOut": "2",
-  "money": "100"
+  "accountFrom": "1",
+  "accountTo": "2",
+  "amount": "100"
 }

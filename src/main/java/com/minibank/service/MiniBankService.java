@@ -15,9 +15,9 @@ public class MiniBankService {
 
     public void transferMoney(String body) throws Exception {
         Transaction transaction = objectMapper.readValue(body, Transaction.class);
-        Account accountIn = TempRepo.map.get(transaction.getAccountNumberIn());
-        Account accountOut = TempRepo.map.get(transaction.getAccountNumberOut());
-        accountIn.setAmount(accountIn.getAmount().add(new BigDecimal(transaction.getMoney())));
-        accountOut.setAmount(accountOut.getAmount().add(new BigDecimal(transaction.getMoney()).negate()));
+        Account accountIn = TempRepo.map.get(transaction.getAccountFrom());
+        Account accountOut = TempRepo.map.get(transaction.getAccountTo());
+        accountIn.setAmount(accountIn.getAmount().add(new BigDecimal(transaction.getAmount())));
+        accountOut.setAmount(accountOut.getAmount().add(new BigDecimal(transaction.getAmount()).negate()));
     }
 }

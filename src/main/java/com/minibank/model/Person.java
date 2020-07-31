@@ -1,16 +1,22 @@
 package com.minibank.model;
 
 import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.NonNull;
+import lombok.RequiredArgsConstructor;
 import lombok.Setter;
 
 import java.util.List;
 
 @Setter
 @Getter
+@RequiredArgsConstructor
+@NoArgsConstructor
 public class Person {
     private String guid;
-    private String name;
-    private String lastName;
-    private String phoneNumber;
+    @NonNull
+    private String login;
+    @NonNull
+    private String password;
     private List<Account> account;
 }
