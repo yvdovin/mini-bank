@@ -18,8 +18,9 @@
 
 --------------
 - Задачи Юры:
-    * MB-1. Добавить авторизацию + Spring Security (подумать о ролях юзеров)
-    
+    * MB-1. Добавить авторизацию + Spring Security (подумать о ролях юзеров) 
+          - ([статья на хабре](https://habr.com/ru/post/482552/))
+          - ([урок от javabrains](https://www.youtube.com/watch?v=TNt3GHuayXs&list=PLqq-6Pq4lTTYTEooakHchTGglSvkZAjnE&index=8))
     * MB-2. Добавить фронт в виде jsp (moustache / freemaker / thymeleaf (предпочтительно?) / полноценный фронт - выбрать)
                     - angular
 
