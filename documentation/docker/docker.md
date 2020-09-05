@@ -1,10 +1,10 @@
 ## Работа с Postgres в Docker
 
 Для того, чтобы использовать **postgres** в **docker**, а ваши таблицы и данные сохранялись при перезапуске контейнера,
-необходимо прописать volumes либо в команде `docker run`:
+необходимо прописать **volumes** либо в команде `docker run`:
 
     docker run -d \
-        --name pgdb \
+        --name pgmb \
         -e POSTGRES_PASSWORD=pswd \
         -e PGDATA=/var/lib/postgresql/data/pgdata \
         -v ./pg_data:/var/lib/postgresql/data/pgdata \
@@ -17,7 +17,7 @@
     services:
       db:
         image: postgres:11
-        container_name: pgdb
+        container_name: pgmb
         ports:
           - 5432:5432
         volumes:
