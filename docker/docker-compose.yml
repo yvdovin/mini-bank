@@ -1,0 +1,14 @@
+version: "3.8"
+
+services:
+  db:
+    image: postgres:11
+    container_name: pgmb
+    ports:
+      - 5433:5432
+    volumes:
+      - ./../db:/var/lib/postgresql/data/pgdata
+    environment:
+      POSTGRES_PASSWORD: pswd
+      PGDATA: /var/lib/postgresql/data/pgdata
+    restart: always
